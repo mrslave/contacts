@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset = "utf-8" />
+	<title>Add contact</title>
+</head>
+<body>
+	<h1>Add contact: </h1>
+	<form method = "POST" action = "create" enctype = "application/x-ww-form-urlencoded">			
+		<p>Name: <input type="text" name="contactname" id="contactname" size="25" required/></p>
+		<p>Email: <input type="text" name="contactemail" id="contactemail" size="50"/></p>
+		<p>Phone: <input type="text" name="contactphone" id="contactphone" size="50" /></p>
+		<p>Address: <input type="text" name="contactaddress" id="contactaddress" size="100" /></p>
+		<p>Birthday: <input type="text" name="contactbirth" id="contactbirth" size="50" /></p>
+		<p>Other: <br><textarea name="contactdesc" id="contactdesc" cols="50" rows="5"> </textarea></p>
+		<p><input type="submit" name="submit" id="submit" value="Add" /></p>
+	</form>
+</body>
+</html>

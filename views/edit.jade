@@ -1,0 +1,50 @@
+extends layout
+block content
+	h1 Edit #{contact.name}
+	form(method="POST" action="/#{contact.id}" enctype="application/x-www-form-urlencoded")
+		p Name:
+			input(type="text"
+			      name="contactname"
+				  id="contactname"
+				  size="25"
+				  value="#{contact.name}"
+				  required)
+		p Email:
+			input(type="text"			      
+				  name="contactemail"
+				  id="contactemail"
+				  size="50"
+				  value="#{contact.email}"
+				  required)
+		p Phone:
+			input(type="text"			      
+				  name="contactphone"
+				  id="contactphone"
+				  size="50"
+				  value="#{contact.phone}")
+		p Address:
+			input(type="text"			      
+				  name="contactaddress"
+				  id="contactaddress"
+				  size="100"
+				  value="#{contact.address}")
+		p Birthday:
+			input(type="text"			      
+				  name="contactbirth"
+				  id="contactbirth"
+				  size="50"
+				  value="#{contact.birth}")		  
+		p Other:
+			textarea(name="contactdesc"
+			         id="contactdesc"
+					 cols="50"
+					 rows="5") #{contact.desc}
+		p 
+			input(type="hidden"
+			      name="_method"
+				  id="_method"
+				  value="put")
+			input(type="submit"
+			      name="submit"
+				  id="submit"
+				  value="Save")

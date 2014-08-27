@@ -1,0 +1,13 @@
+tr		
+	td #{contact.name}
+	td #{contact.email}
+	td #{contact.phone}
+	td #{contact.address}
+	td #{contact.birth}
+	td #{contact.desc}
+	td
+		a(href='/#{contact.id}') Show
+	td
+		a(href='/#{contact.id}/edit') Edit
+	td
+		a(href='/#{contact.id}/del') Remove

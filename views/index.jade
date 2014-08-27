@@ -1,0 +1,19 @@
+extends layout
+block content
+	a(href='/new') New contact
+	table
+		caption List of Contacts
+			if contacts.length
+				tr
+					th Name
+					th Email
+					th Phone
+					th Address
+					th Birthday
+					th Other
+					th
+					th
+					th
+				each contact in contacts
+					if contact
+						include row
